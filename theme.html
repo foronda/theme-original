@@ -88,21 +88,6 @@
         </div>
       </div>
     </div>
-    {% if site.tags %}
-      <nav class="categories">
-        <h4>Categories</h4>
-        <ul>
-          <li><a href="/tag/it" class="{{ set_active('/tag/it') }}">Information Technology</a></li>
-          <li><a href="/tag/webdev" class="{{ set_active('/tag/webdev') }}">Web Development</a></li>
-        </ul>
-      </nav>
-      <h4>Tags</h4>
-      <ul class="tags">
-        {% for tag in site.tags %}
-          <li><a href="/tag/{{ tag.name }}">#{{ tag.name }}</a></li>
-        {% endfor %}
-      </ul>
-      {% endif %}
     <div class="container">
       <div class="row">
         <div class="span6 offset1">
@@ -288,6 +273,17 @@
             </div>
 
             {% if site.tags %}
+            <nav class="categories">
+                <h4>Categories</h4>
+                <ul>
+                  <li><a href="/tag/design" class="{{ set_active('/tag/design') }}">Design</a></li>
+                  <li><a href="/tag/web" class="{{ set_active('/tag/web') }}">Web</a></li>
+                  <li><a href="/tag/ios" class="{{ set_active('/tag/ios') }}">iOS</a></li>
+                  <li><a href="/tag/android" class="{{ set_active('/tag/android') }}">Android</a></li>
+                </ul>
+              </nav>
+
+              <h4>Tags</h4>
             <ul class="tags">
               {% for tag in site.tags %}
                 <li><a href="/tag/{{ tag.name }}">#{{ tag.name }}</a></li>
